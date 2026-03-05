@@ -22,6 +22,11 @@ app.get('/payment/success', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'payment-success.html'));
 });
 
+// root route - serve simple homepage or redirect
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 app.listen(port, '0.0.0.0', () => {
     console.log(`API Server töötab pordi peale ${port}`)
 });
