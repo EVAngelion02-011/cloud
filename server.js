@@ -22,9 +22,10 @@ app.get('/payment/success', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'payment-success.html'));
 });
 
-// root route - serve simple homepage or redirect
+// no root page needed; only payment success is served
+// if someone hits '/', send a simple message or 404
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.status(404).send('Not Found');
 });
 
 app.listen(port, '0.0.0.0', () => {
