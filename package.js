@@ -1,0 +1,11 @@
+module.exports = {
+    "name": "cloud",
+    "version": "1.0.0",
+    "main": "server.js",
+    "script": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.19.2"
+    }
+}
